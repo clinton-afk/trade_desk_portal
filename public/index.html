@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>TRADE DESK — Munala Tradedesk</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+  <div class="site">
+    <header class="topbar">
+      <div class="brand">
+        <h1>TRADE DESK</h1>
+        <small>Munala Tradedesk — Client Portal</small>
+      </div>
+      <div class="user-area" id="userArea"></div>
+    </header>
+
+    <main class="main">
+      <aside class="sidebar">
+        <div class="panel" id="signinPanel">
+          <h2>Sign in</h2>
+          <label>Email
+            <input type="email" id="email" placeholder="your email" autocomplete="email" />
+          </label>
+          <div style="display:flex;gap:8px;margin-top:8px;">
+            <button id="btnSendCode">Send code</button>
+            <button id="btnUseSaved">Use saved</button>
+          </div>
+
+          <div id="otpArea" style="margin-top:12px; display:none;">
+            <label>Enter code
+              <input id="otpInput" type="text" placeholder="6-digit code" />
+            </label>
+            <div style="display:flex;gap:8px;margin-top:8px;">
+              <button id="btnVerify">Verify code</button>
+              <button id="btnResend" class="muted">Resend</button>
+            </div>
+            <div id="otpMsg" class="hint" style="margin-top:8px;"></div>
+          </div>
+
+          <div style="margin-top:12px;">
+            <div id="gsiButton"></div>
+            <div class="hint">Or sign in with Google</div>
+          </div>
+
+          <div class="hint" style="margin-top:8px;">We will email a one-time code to your address to sign in.</div>
+        </div>
+
+        <div class="panel" id="filtersPanel" style="display:none;">
+          <h3>Filters</h3>
+          <label>Search
+            <input id="searchBox" placeholder="Request ID or service" />
+          </label>
+          <label>Status
+            <select id="statusFilter">
+              <option value="">All</option>
+              <option>New</option>
+              <option>In Review</option>
+              <option>Waiting for Client</option>
+              <option>Ready to Send</option>
+              <option>Delivered</option>
+              <option>Closed</option>
+            </select>
+          </label>
+          <div style="display:flex;gap:8px;margin-top:8px;">
+            <button id="btnApplyFilters">Apply</button>
+            <button id="btnClearFilters" class="muted">Clear</button>
+          </div>
+        </div>
+      </aside>
+
+      <section class="content">
+        <div id="jobsContainer" class="panel placeholder">
+          <h2>Your requests</h2>
+          <div id="jobsList">Please sign in to view your requests.</div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer"><small>Munala Tradedesk — TRADE DESK</small></footer>
+  </div>
+
+  <!-- Job detail modal -->
+  <div id="modalOverlay" class="modal-overlay hidden" role="dialog" aria-hidden="true">
+    <div class="modal">
+      <button class="modal-close" id="modalClose">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
