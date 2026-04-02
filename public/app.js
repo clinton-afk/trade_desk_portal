@@ -8,7 +8,7 @@
  */
 
 const PROXY_URL = '/api/proxy';
-const PROXY_API_KEY = 'REPLACE_WITH_YOUR_PROXY_API_KEY';
+const PROXY_API_KEY = 431070652aee79cbe0c6a9dd32e8c6ce37b96f1f6d274704fd853fa32a4f87b0;
 const APPS_SCRIPT_EXEC_URL = https://script.google.com/macros/s/AKfycbwfs9DgMak8AdGGQC-JWy2Px591owTybI-QcaMeYz19fOc5wt2EgSIiL1VkO8xaBOpOIQ/exec;
 const GOOGLE_CLIENT_ID = 'REPLACE_WITH_GOOGLE_CLIENT_ID';
 
